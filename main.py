@@ -81,7 +81,7 @@ def app(cfg: DictConfig) -> None:
         sampling_rate=cfg.processing.sampling_rate,
         chunk_size=cfg.processing.chunk_size
     )
-
+    print(predicted_texts)
     logger.info(f"Writing subtitles into {output_file} ...")
     create_srt(
         output_file, predicted_texts, cfg.processing.chunk_size
